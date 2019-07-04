@@ -1,0 +1,75 @@
+@font-face{
+	font-family: "MisoBold";
+	src:url("..//fonts/MisoBold.otf") format("truetype");
+	font-style:normal;
+	font-weight: bold;
+}
+@font-face{
+	font-family:"MisoRegular";
+	src:url("..//fonts/MisoRegular.ttf") format("truetype");
+	font-style:normal;
+	font-weight: normal;
+}
+@import 'normalize';
+@import 'mixins';
+
+*{
+	box-sizing: border-box;
+	
+}
+
+html {
+	font: 10px/1.6 'MisoRegular';
+	height: 100%;
+}
+body {
+	margin: 0 auto;
+	font-size: 2rem;
+}
+.container{
+	background-color: #fdde7e;
+	height: 600px;
+	width: 1200px;
+	margin:0 auto;
+}
+
+.flex{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+.flex--column{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+.card{
+	width: 360px;
+	height: 440px;
+	background-color: #FFF;
+	&:hover,
+	&:active,
+	&:focus{
+		height:480px;
+		transition:.3s ease-in;
+	}
+	&__price{
+		font-size: 5.6rem;
+		opascity:.5;
+	}
+	&__title{
+		font-family:"MisoBold";
+		font-size: 7rem;
+		font-weight: bold;
+		color:#02995b;
+	}
+	&__subtitle{
+		text-align: center;
+		font-size: 2rem;
+		opascity:.5;
+	}
+}
+
+
